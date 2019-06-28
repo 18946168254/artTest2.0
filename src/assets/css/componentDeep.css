@@ -1,0 +1,109 @@
+/**
+* 针对第三方样式组件，样式深入修改
+* 解决 ios 端， mintui field /deep/ 样式，需要组件页 二次导入的bug。
+*
+*/
+/*no*/
+/* mint-ui field */
+.mint-field-custom:first-of-type /deep/ .mint-cell-wrapper {
+  background: none;
+}
+.mint-field-custom /deep/ .mint-cell-wrapper {
+  padding: 42px 0 20px 0;
+  background-position: 0 -42px;
+  font-size: inherit;
+}
+.mint-field-custom /deep/ .mint-cell-title {
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+.mint-field-custom /deep/ .mint-cell-text {
+  font-family: PingFangSC-Regular;
+  font-size: 26px;
+  color: rgba(0, 0, 0, 0.8);
+}
+.mint-field-custom /deep/ textarea {
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 6px;
+  /*no*/
+  padding: 20px;
+}
+.mint-field-custom /deep/ input::-webkit-input-placeholder,
+.mint-field-custom /deep/ textarea::-webkit-input-placeholder {
+  font-family: PingFangSC-Regular;
+  font-size: 26px;
+  color: rgba(0, 0, 0, 0.2);
+}
+.mint-field-custom /deep/ input {
+  font-family: PingFangSC-Regular;
+  font-size: 26px;
+  color: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.8) !important;
+  line-height: normal;
+}
+.mint-field-custom /deep/ input[disabled] {
+  background-color: #ffffff;
+}
+.mint-field-input-true {
+  color: rgba(0, 0, 0, 0.8) !important;
+}
+.mint-field-input-none /deep/ input {
+  display: none;
+}
+.mint-field-slot-more {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mint-field-slot-more img {
+  height: 48px;
+  width: 48px;
+}
+.mint-field-slot-all /deep/ .mint-field-other {
+  width: 100%;
+}
+.mint-field-none-border /deep/ .mint-cell-wrapper,
+.mint-field-none-border.mint-cell:last-child {
+  background: none;
+}
+.mint-field-none-title /deep/ .mint-cell-title {
+  display: none;
+}
+/* mint-ui switch */
+.mint-switch-custom {
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.mint-switch-custom /deep/ .mint-switch-input:checked + .mint-switch-core {
+  border-color: #009F8A;
+  background-color: #009F8A;
+}
+.mint-switch-custom /deep/ .mint-switch-input:checked + .mint-switch-core::after {
+  transform: translateX(18px);
+}
+.mint-switch-custom /deep/ .mint-switch-core {
+  height: 30px;
+  width: 48px;
+}
+.mint-switch-custom /deep/ .mint-switch-core::before {
+  height: 26px;
+  width: 46px;
+  background-color: #d9d9d9;
+  border-radius: 16px;
+  /*no*/
+}
+.mint-switch-custom /deep/ .mint-switch-core::after {
+  height: 26px;
+  width: 26px;
+}
+.mint-switch-custom /deep/ .mint-switch-label {
+  font-size: 26px;
+}
+/* zyby-ui */
+.by-radio-custom /deep/ input[type="radio"] + span::before {
+  border-color: #009F8A;
+}
+.by-radio-custom /deep/ input[type="radio"]:checked + span::before {
+  background-color: #009F8A;
+}
