@@ -14,7 +14,7 @@
     "lint:es:fix": "eslint --fix src/**/*.{vue,js}"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "babel-polyfill": "^6.26.0",
     "barrage-ui": "^1.0.9",
     "date-fns": "^1.30.1",
